@@ -1,2 +1,2 @@
 # companydemo
-This is demo company directory webpage
+This is a demo company directory webpage
