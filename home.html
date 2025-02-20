@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
+<script>
+    // Redirect to login.html if not logged in
+    if (localStorage.getItem("loggedIn") !== "true") {
+        window.location.href = "index.html";
+    }
+</script>
+
 <body>
 	<nav class="navbar background">
 		<ul class="nav-list">
