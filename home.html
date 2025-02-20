@@ -78,6 +78,15 @@
 		</div>
 	</section>
 
+	<button onclick="logout()" class="btn btn-danger">Logout</button>
+
+        <script>
+    function logout() {
+        localStorage.removeItem("loggedIn"); // Remove login flag
+        window.location.href = "index.html"; // Redirect to login page
+    }
+       </script>
+
 	<footer class="background">
 		<p class="text-footer">
 			Copyright ©-All rights are reserved
@@ -86,14 +95,5 @@
 
 	</footer>
 </body>
-
-<button onclick="logout()" class="btn btn-danger">Logout</button>
-
-<script>
-    function logout() {
-        localStorage.removeItem("loggedIn"); // Remove login flag
-        window.location.href = "index.html"; // Redirect to login page
-    }
-</script>
 
 </html>
