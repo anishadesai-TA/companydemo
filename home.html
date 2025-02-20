@@ -87,4 +87,13 @@
 	</footer>
 </body>
 
+<button onclick="logout()" class="btn btn-danger">Logout</button>
+
+<script>
+    function logout() {
+        localStorage.removeItem("loggedIn"); // Remove login flag
+        window.location.href = "index.html"; // Redirect to login page
+    }
+</script>
+
 </html>
