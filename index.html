@@ -25,6 +25,13 @@
 </head>
 <body>
 
+    <script>
+        // If already logged in, redirect to home.html
+        if (localStorage.getItem("loggedIn") === "true") {
+            window.location.href = "home.html";
+        }
+    </script>
+
     <div class="container">
         <div class="login-container">
             <h3 class="text-center">Login</h3>
@@ -58,7 +65,7 @@
             // Validate login
             if (username === validUsername && password === validPassword) {
                 localStorage.setItem("loggedIn", "true"); // Store login status
-                window.location.href = "index.html"; // Redirect to index.html
+                window.location.href = "home.html"; // Redirect to home.html
             } else {
                 document.getElementById("errorMsg").style.display = "block"; // Show error
             }
