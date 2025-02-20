@@ -22,6 +22,11 @@
         .back-button {
             margin-top: 20px;
         }
+        .logout-container {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+        }
     </style>
     <script>
         // Redirect to login.html if not logged in
@@ -56,10 +61,11 @@
             <div class="text-center back-button">
                 <a href="index.html" class="btn btn-primary">Go Back to Homepage</a>
             </div>
-            <div class="text-center mt-3">
-                <button onclick="logout()" class="btn btn-danger">Logout</button>
-            </div>
         </div>
+    </div>
+
+    <div class="logout-container">
+        <button onclick="logout()" class="btn btn-danger">Logout</button>
     </div>
 
     <script>
