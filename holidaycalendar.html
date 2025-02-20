@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<script>
-    // Redirect to login.html if not logged in
-    if (localStorage.getItem("loggedIn") !== "true") {
-        window.location.href = "index.html";
-    }
-</script>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,6 +8,7 @@
     <style>
         body {
             background-color: #e0e5ec;
+            font-size: 18px; /* Increased font size */
         }
         .calendar-card {
             background-color: white;
@@ -28,6 +23,12 @@
             margin-top: 20px;
         }
     </style>
+    <script>
+        // Redirect to login.html if not logged in
+        if (localStorage.getItem("loggedIn") !== "true") {
+            window.location.href = "index.html";
+        }
+    </script>
 </head>
 <body>
     <div class="container mt-4">
@@ -41,8 +42,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>New Years Day</td><td>Wednesday, January 1, 2025</td></tr>
-                    <tr><td>Presidents Day</td><td>Monday, February 17, 2025</td></tr>
+                    <tr><td>New Year's Day</td><td>Wednesday, January 1, 2025</td></tr>
+                    <tr><td>Presidents' Day</td><td>Monday, February 17, 2025</td></tr>
                     <tr><td>Memorial Day</td><td>Monday, May 26, 2025</td></tr>
                     <tr><td>Independence Day</td><td>Friday, July 4, 2025</td></tr>
                     <tr><td>Labor Day</td><td>Monday, September 1, 2025</td></tr>
@@ -55,14 +56,17 @@
             <div class="text-center back-button">
                 <a href="index.html" class="btn btn-primary">Go Back to Homepage</a>
             </div>
+            <div class="text-center mt-3">
+                <button onclick="logout()" class="btn btn-danger">Logout</button>
+            </div>
         </div>
     </div>
+
+    <script>
+        function logout() {
+            localStorage.removeItem("loggedIn"); // Remove login flag
+            window.location.href = "index.html"; // Redirect to login page
+        }
+    </script>
 </body>
-<button onclick="logout()" class="btn btn-danger">Logout</button>
-<script>
-    function logout() {
-        localStorage.removeItem("loggedIn"); // Remove login flag
-        window.location.href = "index.html"; // Redirect to login page
-    }
-</script>
 </html>
